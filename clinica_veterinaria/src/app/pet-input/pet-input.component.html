@@ -1,0 +1,35 @@
+<!-- login.component.html -->
+<div class="login-container">
+  <mat-card class="custom-card">
+    <mat-card-header class="custom-card-header">
+      <mat-card-title class="custom-card-title" style="margin-bottom: 10px;">Registrar Mascota</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form>
+        <!-- Agrega el nuevo código aquí -->
+
+        <mat-form-field>
+          <mat-label>Clientes</mat-label>
+          <mat-select [(value)]="selectedUserId">
+            @for (dueno of duenos; track dueno) {
+              <mat-option [value]="dueno.value">{{dueno.viewValue}}</mat-option> }
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Nombre Mascota" type="text" [(ngModel)]="pet_name" name="pet_name" required>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Especie Mascota" type="text" [(ngModel)]="pet_especie" name="pet_especie" required>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary"  style="margin: 5px;"  class="custom-button" (click)="save_pet()">Guardar Mascota</button>
+        <button mat-raised-button color="secondary"   style="margin: 5px;"  class="custom-button" (click)="logout()">Salir</button>
+      </form>
+    </mat-card-content>
+
+  
+  </mat-card>
+</div>

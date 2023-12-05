@@ -1,0 +1,52 @@
+<!-- register.component.html -->
+
+<div class="register-container">
+    <mat-card class="custom-card">
+        <mat-card-header class="custom-card-header">
+            <mat-card-title class="custom-card-title" style="margin-bottom: 10px;">Cliente: Registrarse</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <form>
+                <mat-form-field>
+                    <input matInput placeholder="Cédula" type="text" [(ngModel)]="id" name="id_user" required>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Nombres Completos" type="text" [(ngModel)]="names" name="names_user" required>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Numero Telefónico" type="text" [(ngModel)]="phone" name="phone" required>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Direccion" type="text" [(ngModel)]="direction" name="direction" required>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Correo electrónico" type="email" [(ngModel)]="email" name="email" required>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Contraseña" type="password" [(ngModel)]="password" name="oldpassword" required>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Confirmar Contraseña" type="password" [(ngModel)]="secondpassword"
+                        name="secondpassword" required>
+                </mat-form-field>
+
+                <button mat-raised-button color="primary" class="custom-button" (click)="signin()">Registrarse</button>
+
+            </form>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <p>¿Ya tienes una cuenta?
+                <button mat-raised-button color="secondary" class="custom-button" routerLink="/login">Ingresar</button>
+            </p>
+        </mat-card-actions>
+
+    </mat-card>
+</div>

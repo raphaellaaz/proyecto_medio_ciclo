@@ -1,0 +1,30 @@
+/* register.component.css */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .custom-card {
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .custom-card-header {
+    background-color: #4CAF50; /* Puedes cambiar esto al color que prefieras */
+    color: white;
+  }
+  
+  .custom-card-title {
+    font-size: 1.5em;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .custom-button {
+    margin-top: 20px;
+  }
+  

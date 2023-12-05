@@ -1,0 +1,32 @@
+<!-- login.component.html -->
+
+<div class="login-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Iniciar Sesión - VETERIANRIA</mat-card-title>
+      </mat-card-header>
+  
+      <mat-card-content>
+        <form>
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Correo electrónico" type="email" [(ngModel)]="email" name="email" required>
+          </mat-form-field>
+  
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Contraseña" type="password" [(ngModel)]="password" name="password" required>
+          </mat-form-field>
+  
+          <button mat-raised-button color="primary" (click)="login()" class="button-login">Iniciar Sesión</button>
+        </form>
+      </mat-card-content>
+  
+      <mat-card-actions>
+        <p>¿No tienes una cuenta?
+          <button mat-raised-button color="secondary" (click)="toRegister()" >Registrarte</button>
+        </p>
+        <p>¿Problemas?
+          <button mat-raised-button color="secondary" (click)="toRecup()" >Recuperar</button>
+        </p>
+      </mat-card-actions>
+    </mat-card>
+  </div>
